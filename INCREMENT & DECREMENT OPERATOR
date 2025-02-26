@@ -1,0 +1,22 @@
+(1)
+public class main{
+    public static void main(String[] args) {
+        int a=20,c=40;
+        ++a;
+        c++;
+        System.out.println(c++);
+        System.out.println(++c);
+        System.out.println(a);
+    }
+}
+
+(2)
+public class main{
+    public static void main(String[] args) {
+        int a=20;
+        System.out.println(a-- + ++a);
+        int b=a++;
+        System.out.println(b++);
+        System.out.println(a+b);
+    }
+}
