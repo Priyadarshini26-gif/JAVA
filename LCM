@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class lcm {
+public class main{
     public static void main(String[] args){
         int lar=0;
         int sm=0;
