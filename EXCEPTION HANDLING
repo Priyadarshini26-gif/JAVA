@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class main {
+    public static void main(String[]args){
+        Scanner s=new Scanner(System.in);
+        try {
+            System.out.println("enter dividend and divisor:");
+            int dividend = s.nextInt();
+            int divisor = s.nextInt();
+            System.out.println(dividend / divisor);
+        }
+        catch(InputMismatchException e){
+            System.out.println("check input");
+        }
+        finally{
+            System.out.println("thank you");
+        }
+    }
+}
