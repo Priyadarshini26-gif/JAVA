@@ -1,0 +1,26 @@
+import java.util.*;
+public class main {
+    public static void main(String[]args){
+        Scanner s=new Scanner(System.in);
+        System.out.println("Enter n:");
+        int n=s.nextInt();
+
+        Solution sol=new Solution();
+        int result = sol.fib(n);
+
+        System.out.println("Fibonacci("+n+") ="+result);
+    }
+}
+
+class Solution{
+    public int fib(int n){
+        if (n<2) return n;
+        int a=0,b=1;
+        for(int i=2;i<=n;i++){
+            int c=a+b;
+            a=b;
+            b=c;
+        }
+        return a;
+    }
+}
