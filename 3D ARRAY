@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[]args){
+        Scanner s= new Scanner(System.in);
+        System.out.println("enter the number of sections:");
+        int sec = s.nextInt();
+        System.out.println("enter the number of students:");
+        int stu = s.nextInt();
+        System.out.println("enter the number of subjects:");
+        int sub = s.nextInt();
+        int [][][] marks=new int [sec][stu][sub];
+        int [] total =new int [sec]; //wrong
+        for(int i=0;i<sec;i++){
+            System.out.println("section"+(i+1));
+            for(int j=0;j<stu;j++){
+                System.out.println("student"+(j+1));
+                for(int k=0;k<sub;k++){
+                    System.out.println("subject"+(k+1));
+                    marks[i][j][k]=s.nextInt();
+                }
+            }
+        }
+        for(int i=0;i<sec;i++){
+            System.out.println("section"+(i+1));
+            for(int j=0;j<stu;j++){
+                System.out.println("student"+(j+1));
+                for(int k=0;k<sub;k++){
+                    System.out.println("subject"+(k+1)+ "mark is:" + marks[i][j][k]);
+                    total[i]=total[i]+marks[i][j][k];
+                }
+            }
+        }
+        for(int a:total) System.out.println(a);
+    }
+}
