@@ -1,0 +1,21 @@
+import java.util.*;
+public class p27 {
+    public static void main(String[]args){
+        Scanner s=new Scanner(System.in);
+        System.out.println("enter base x:");
+        int x=s.nextInt();
+        System.out.println("enter exponent n:");
+        int n=s.nextInt();
+
+        Exponent ex=new Exponent();
+        double result=ex.power(x,n);
+        System.out.println(result);
+    }
+}
+class Exponent{
+    public double power(int x,int n){
+        double result=1;
+        for(int i=0;i<n;i++) result*=x;
+        return result;
+    }
+}
